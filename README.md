@@ -11,9 +11,13 @@ pip install -r requirements.txt
 4. Создайте базу данных Postgres, а затем в файл **config.py** внесите данные
 созданной базы данных.
 5. Создайте таблицы в базе данных из файла **createtb.sql**.
-6. Запустите сервис командой:
-```python
-python3 -m src.server.server
+6. Создайте переменную окружения Flask командой:
+```
+export FLASK_APP=src/server/server.py
+```
+7. Запустите сервис командой:
+```
+python3 -m flask run --host=0.0.0.0 --port=5000
 ```
 
 ## Тесты
